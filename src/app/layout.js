@@ -1,5 +1,10 @@
 import localFont from "next/font/local";
 import "./globals.css";
+// pages/_app.js or wherever your global imports are
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+import Head from 'next/head';
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,7 +24,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+
     <html lang="en">
+      <Head>
+      <script
+          src="https://kit.fontawesome.com/7057a291ca.js"
+          crossOrigin="anonymous"
+          async
+        ></script>
+
+        
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
